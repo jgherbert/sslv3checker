@@ -3,13 +3,13 @@ sslv3checker
 
 Python script to check if a website supports SSLv3. This is considered to be A Bad Thing and will return "XX" if an SSLv3 connection is successful.
 
-*Syntax*:
+##Syntax##
 
-`sslv3checker.py {file}`
+`sslv3checker.py [file]`
 
-*Inputs:*
+##Inputs##
 
->The optional {file} parameter points to a file containing a list of hosts and IPs. If not specified, the default file './target\_lists' is used.
+>The optional [file] parameter points to a file containing a list of hosts and IPs. If not specified, the default file './target\_lists' is used.
 
 >An example of the file contents might be:
 
@@ -22,7 +22,7 @@ Python script to check if a website supports SSLv3. This is considered to be A B
 
 > It is generally better to use IPs than hostnames, as it is more likely to avoid redirects and similar that might lead to a ?? result (see below).
 
-*Output*
+##Output##
 
 >Output is pretty straightforward but can be quite wide, as the raw error codes are included (or in the case of SSLv3 connections, the accepted ciphers).
 
@@ -48,7 +48,7 @@ Python script to check if a website supports SSLv3. This is considered to be A B
 
 > So we're looking at less than 0.3 seconds to check 5 web sites on the Internet.
 
-*Caveats*
+##Caveats##
 
 >For speed of execution, the program forks a copy of itself for every line in the data file. There is no mechanism in place to limit how many instances are spawned, so if you use a long list of hostnames you do so at your own risk. Better still, why not fork the project, write the code to limit the program to max\_forks, and submit it back to me as a patch? I'd appreciate that ;-)
 
@@ -60,7 +60,7 @@ Python script to check if a website supports SSLv3. This is considered to be A B
 
 >I am not a python programmer. Please forgive the inevitable style failures and general "Ugh, you just don't do it that way" issues; this is pretty much my first script, so I would be grateful for a little slack. Ok, a lot.
 
-*Author*
+##Author##
 
 John Herbert  ::  @mrtugs  ::  http://lamejournal.com/
 
